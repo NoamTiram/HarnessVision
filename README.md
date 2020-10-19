@@ -9,9 +9,9 @@ In python OpenCV, We can have two methods:
   1.	Sparse: Provide the frame, the points to track and the next frame (Lucas-Kanade method) 
     a.	Choose manually 
     b.	Use Object detection 
-  2.	Dense: track all the points – using Gunner Franeback’s algorithm 
+  2.	Dense: track all the points – using Gunner Franeback’s algorithm. We are using that method.
 
-In the algorithm, I'm converting optical flow vector into a polar form, then use the magnitude in order to calculate how many movements occured in the video.
+In the algorithm, I'm converting optical flow vector into a polar form, then use the magnitude (which being normalized into 0-255, just for faster calculations) in order to calculate how many movements occured in the video.
 I'm normalizing by precentage of "high movements" (alpha param) - and that's the score. that way, long/short videos won't be biased.
 
 
