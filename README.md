@@ -14,4 +14,5 @@ In python OpenCV, We can have two methods:
 In the algorithm, I'm converting optical flow vector into a polar form, then use the magnitude (which being normalized into 0-255, just for faster calculations) in order to calculate how many movements occured in the video.
 I'm normalizing by precentage of "high movements" (alpha param) - and that's the score. that way, long/short videos won't be biased.
 
+for visualizations, plotMov() is printing the movements during the video (y axis) along the frames (x axis)
 
